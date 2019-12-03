@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+	<head> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+		<title>Ahorcado</title>
+		<!--grupo CSS-->
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+        <link rel="stylesheet" href="css/estilo.css" />
+
+		<!--grupo JavaScript-->
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/acciones.js" type="text/javascript"></script>
+		<script src="phonegap.js" type="text/javascript"></script>
+	</head>
+    <body>
+     <div data-role="page" id="Principal"> 
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" >
+      </div>
+      <div role="main" class="ui-content">
+      <div id="logo">
+       <img src="images/logo.png">
+      </div>
+      <div id="menu">
+       <nav>
+        <ul>
+         <li><a href="#opciones">Opciones</a></li>
+         <li><a href="#jugar">Jugar</a></li>
+        </ul>
+       </nav>
+      </div>
+      </div>
+     </div>
+     
+                                            <!--Interfaz Jugar-->
+                                            
+     <div data-role="page" id="jugar">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" id="barra">
+       <a href="#Principal" class="ui-btn"> principal</a>
+       <h2>Ahorcado</h2>
+       <a href="#" id="btn-comenzar" class="ui-btn"> Comenzar</a>
+      </div>
+      <div role="main" class="ui-content">
+       <div id="contenedor_imagen">
+        <img id="imagen" src="images/0.png">
+       </div>
+      <div id="palabra">
+       &nbsp;
+      </div>
+      <div id="palabra-error" style="display: none">
+       $nbsp;
+      </div>
+      <div id="contenedor_interfaz">
+      <div id="contenedor_letras">
+      <div id="anterior">
+       <i class="fa fa-chevron-left"></i>
+      </div>
+      <div id="actual">
+      </div>
+      <div id="siguiente">
+       <i class="fa fa-chevron-right"></i>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div data-role="footer" data-position="fixed" data-toggle="false">
+       <h3>palabras encontradas: <span id="encontradas">0</span></h3>
+      </div> 
+     </div>
+    
+    
+                                         <!--Interfaz Opciones-->
+                                           
+    <div data-role="page" id="opciones" >   
+     <div data-role="header" data-position="fixed" data-tap-toggle="false">
+     </div>
+       <a href="#Principal" class="ui-btn ui-corner-all" style="width: 200px"> Principal</a>
+     <div role="main" class="ui-content">
+      <input type="text" id="txtIP" value="192.168.4.20" >
+      <span id="btnbuscarcolecciones" class="ui-btn ui-corner-all" style="width: 200px">Buscar Colecciones</span>
+     <div id="cargando">
+      <img src="images/ahorcado1.gif" width="10%" height="auto">
+     </div>
+     <div id="seleccion-opciones">
+      <br>
+      Seleccionar una coleccion
+      <br>
+      <select id="optcolecciones">
+      </select>
+      <br>
+       Numero de palabras
+      <br>
+      <input type="number" id="txtcuantas">
+      <span id="btnseleccionar" class="ui-btn ui-corner-all" style="width: 200px" > Seleccionar</span>
+     </div>
+     </div>	
+    </div>
+  </body>
+</html> 
